@@ -1,0 +1,46 @@
+.container{
+    display:flex;
+}
+
+.Dashside{
+    flex:1;
+    background-color:rgb(87, 230, 30);
+    height:calc(100vh - 50px);
+    top:50px;
+}
+.other{
+    position:sticky;
+    height: 40px;
+    flex:7;
+    background-color: rgb(117, 216, 36);
+}
+.sidebarWrapper{
+    padding:20px;
+    color:white;
+}
+.sidebarMenu{
+    margin: top 10px;
+}
+h3{
+    font-size:18px;
+    font-weight:bold;
+    color:rgb(9, 5, 27);
+}
+.sidebarList{
+    list-style: none;
+    padding: 5px;
+}
+.sidebarListItem{
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 10px !important;
+}
+.sidebarListItem.active,
+.sidebarListItem.hover{
+    background-color: rgb(142, 175, 21);
+}
+.sidebarIcon{
+     margin-right: 5px;
+     font-size: 20px !important;
+}
