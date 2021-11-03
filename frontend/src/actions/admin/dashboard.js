@@ -1,6 +1,7 @@
 import React from 'react';
 import './dashboard.css';
 import {LineStyle, Timeline,TrendingUp} from '@material-ui/icons'
+import { Link } from 'react-router-dom';
 const dashboard = () => {
     return (
             < >
@@ -25,10 +26,12 @@ const dashboard = () => {
                             <h3 className="sideTittle">Manage</h3>
                             <ul className="sidebarList">
                                      <li className="sidebarListItem " >
-                                        <LineStyle className="sidebarIcon" /> Users
+                                    <LineStyle className="sidebarIcon" />
+                                    <Link to="/orders">Orders</Link>
                                     </li>
                                     <li className="sidebarListItem " >
-                                        <LineStyle className="sidebarIcon" /> Products
+                                    <LineStyle className="sidebarIcon" />
+                                    <Link to="/products">Products</Link>
                                     </li>
                                     <li className="sidebarListItem">
                                         <Timeline className="sidebarIcon" />Tranactions

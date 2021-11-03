@@ -25,18 +25,18 @@ function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
-  const openMenu = () => {
-    document.querySelector('.sidebar').classList.add('open');
-  };
-  const closeMenu = () => {
-    document.querySelector('.sidebar').classList.remove('open');
-  };
+  //const openMenu = () => {
+  //  document.querySelector('.sidebar').classList.add('open');
+  //};
+  //const closeMenu = () => {
+  //  document.querySelector('.sidebar').classList.remove('open');
+  //};
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="header">
           <div className="brand">
-            <button onClick={openMenu}>&#9776;</button>
+            {/*<button onClick={openMenu}>&#9776;</button>*/}
             <Link to="/"><img src="https://drive.google.com/file/d/1k2LOVh8fdfXd4iVJE5Ex0wS1DtVqBcvS/view?usp=sharing" alt="logo"/> </Link>
           </div>
           <div className="header-links">
@@ -60,7 +60,7 @@ function App() {
             )}
           </div>
         </header>
-        <aside className="sidebar">
+        {/*<aside className="sidebar">
           <h3>Shopping Categories</h3>
           <button className="sidebar-close-button" onClick={closeMenu}>
             x
@@ -68,7 +68,7 @@ function App() {
           <ul className="categories">
             <li>
               <Link to="/category/fashion">Fashion</Link>
-            </li>
+            </li> 
 
             <li>
               <Link to="/category/kitchen">Kitchen</Link>
@@ -87,7 +87,7 @@ function App() {
               <Link to="/category/Packaging">Packaging</Link>
             </li>
           </ul>
-        </aside>
+        </aside>*/}
         <main className="main">
           <div className="content">
             {/*<Route path="/home" component={home} />*/}

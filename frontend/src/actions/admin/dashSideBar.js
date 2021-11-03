@@ -24,7 +24,7 @@ const  dashSideBar = () =>{
                             <h3 className="sideTittle">Manage</h3>
                             <ul className="sidebarList">
                                      <li className="sidebarListItem " >
-                                        <LineStyle className="sidebarIcon" /> Users
+                                        <LineStyle className="sidebarIcon" />
                                     </li>
                                     <li className="sidebarListItem " >
                                         <LineStyle className="sidebarIcon" /> Products
