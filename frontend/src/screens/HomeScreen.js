@@ -4,12 +4,13 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import Rating from '../components/Rating';
+import Sidebar from '../components/Sidebar';
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [sortOrder, setSortOrder] = useState('');
   const category = props.match.params.id ? props.match.params.id : '';
-  // @ts-ignore
+
   const productList = useSelector((state) => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
@@ -29,47 +30,11 @@ function HomeScreen(props) {
     setSortOrder(e.target.value);
     dispatch(listProducts(category, searchKeyword, sortOrder));
   };
-  const openMenu = () => {
-    document.querySelector('.sidebar').classList.add('open');
-  };
-  const closeMenu = () => {
-    document.querySelector('.sidebar').classList.remove('open');
-  };
+  
 
   return (
     <>
-      <div className="slider">
-      <button onClick={openMenu}>&#9776;</button>
-      <aside className="sidebar">
-          <h3>Shopping Categories</h3>
-          <button className="sidebar-close-button" onClick={closeMenu}>
-            x
-          </button>
-          <ul className="categories">
-            <li>
-              <Link to="/category/fashion">Fashion</Link>
-            </li> 
-
-            <li>
-              <Link to="/category/kitchen">Kitchen</Link>
-            </li>
-            <li>
-              <Link to="/category/gifts">Gifts</Link>
-            </li>
-
-            <li>
-              <Link to="/category/electronics">Electronics</Link>
-            </li>
-            <li>
-              <Link to="/category/bathroom">Bathroom</Link>
-            </li>
-            <li>
-              <Link to="/category/Packaging">Packaging</Link>
-            </li>
-          </ul>
-        </aside>
-        <p>Welcome to Omart Kenya </p>
-      </div>
+      <Sidebar/>
       {category && <h2>{category}</h2>}
 
         

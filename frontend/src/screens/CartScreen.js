@@ -38,7 +38,7 @@ function CartScreen(props) {
         {
           cartItems.length === 0 ?
             <div>
-              Cart is empty
+              Cart is empty<Link to ="./">Continue shopping</Link>
           </div>
             :
             cartItems.map(item =>
